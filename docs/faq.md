@@ -17,7 +17,7 @@ If the contents here do not cover your issue, please create an issue using the [
   python setup.py install
   ```
 
-- **No matching distribution found for xtcocotools>=1.6**
+- **No matching distribution found for xtcocotools>=1.6; "No such file or directory: 'xtcocotools/_mask.c'"**
 
   1. Install cython by `pip install cython`.
   1. Install xtcocotools from [source](https://github.com/jin-s13/xtcocoapi).

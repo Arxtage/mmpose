@@ -37,7 +37,10 @@ def main():
 
     cfg = Config.fromfile(args.config)
     model = build_posenet(cfg.model)
-    model = model.cuda()
+    
+    # setting device on GPU if available, else CPU
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model = model.to(device)
     model.eval()
 
     if hasattr(model, 'forward_dummy'):
